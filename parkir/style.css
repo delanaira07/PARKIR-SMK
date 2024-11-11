@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #84c5f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #343a40;
+    color: #41a0cc;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.parking-lot {
+    margin-bottom: 30px;
+}
+
+.spots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+.spot.selected {
+    background-color: blue;
+    transform: scale(1.1);
+}
+
+
+.spot {
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Warna tempat parkir */
+.spot:not(.occupied):hover {
+    background-color: #3cb371; /* Warna hijau lebih terang saat hover */
+    transform: scale(1.1); /* Animasi zoom */
+}
+
+.spot.occupied {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+.spot.selected {
+    background-color: #4682b4; /* Warna biru untuk spot terpilih */
+}
+
+/* Kontrol (form dan tombol) */
+.controls {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
+.help-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+a {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
